@@ -1,26 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".Main2Activity">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="Anshu Side Completed!"
-        android:textSize="20sp"
-        tools:ignore="HardcodedText" />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="650dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/unsplash"
-        android:contentDescription="TODO"
-        tools:ignore="ContentDescription,HardcodedText" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".Main2Activity">
 
-</LinearLayout>
+        <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_menu_black_24dp"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Profile"
+            android:textSize="40sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:layout_width="94dp"
+            android:layout_height="97dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/ic_profile"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:hint="Enter your Name"
+            android:textSize="20sp"
+            tools:ignore="Autofill,HardcodedText,TextFields" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:hint="Enter your Desigation"
+            android:textSize="20sp"
+            tools:ignore="Autofill,HardcodedText,TextFields" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/line"
+            tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/profile">
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email ID"
+            android:textSize="25sp"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/iemail"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Email ID" />
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
